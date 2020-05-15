@@ -14,11 +14,15 @@ const getPlayerChoice = function() {
         selection !== SCISSORS
     ) {
         alert(`Invalid Choice! We chose ${DEFAULT_USER_CHOICE} for you`)
-    }
+        return DEFAULT_USER_CHOICE;
+    } 
+    return selection;
 }
 
 const start = () => {
-    console.log('Starting Game')
+    console.log('Starting Game');
+    const playerSelection = getPlayerChoice();
+    console.log(playerSelection);
 }
 
 startGameBtn.addEventListener('click', start);
