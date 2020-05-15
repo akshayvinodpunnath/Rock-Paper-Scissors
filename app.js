@@ -30,9 +30,10 @@ const start = () => {
     }
     gameIsRunning = true;
     console.log('Starting Game');
-
     const playerSelection = getPlayerChoice();
     console.log(playerSelection);
+    const winner = getWinner(getComputerChoice(),playerSelection);
+    console.log(winner)
 }
 
 const getComputerChoice = function() {
