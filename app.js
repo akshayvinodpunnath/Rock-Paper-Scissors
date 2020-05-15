@@ -32,4 +32,14 @@ const start = () => {
     console.log(playerSelection);
 }
 
+const getComputerChoice = function() {
+    const randomValue = Math.random();
+    if (randomValue < 0.34) {
+        return ROCK;
+    } else if (randomValue < 0.67) {
+        return PAPER;
+    }
+    return SCISSORS;
+}
+
 startGameBtn.addEventListener('click', start);
