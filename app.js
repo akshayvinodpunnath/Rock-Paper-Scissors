@@ -3,16 +3,17 @@ const startGameBtn = document.getElementById('start-game-btn');
 const ROCK = 'ROCK';
 const PAPER = 'PAPER';
 const SCISSORS = 'SCISSORS';
+const DEFAULT_USER_CHOICE = ROCK;
 
 const getPlayerChoice = function() {
-    const selection = prompt('Rock, Paper or Scissors?');
+    const selection = prompt(`${ROCK}, ${PAPER} or ${SCISSORS}?`,'').toUpperCase();
 
     if (
         selection !== ROCK &&
         selection !== PAPER &&
         selection !== SCISSORS
     ) {
-        alert('Invalid Choice! We chose Rock for you')
+        alert(`Invalid Choice! We chose ${DEFAULT_USER_CHOICE} for you`)
     }
 }
 
